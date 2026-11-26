@@ -1,0 +1,974 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #080808;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #00aaff;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6b00;
+}
+
+/* APRESENTAÇÃO */
+
+#inicio {
+    min-height: 480px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(90deg, #111111, #292929);
+}
+
+#inicio h2 {
+    font-size: 42px;
+    max-width: 650px;
+    margin-bottom: 20px;
+    color: #ff6b00;
+}
+
+#inicio p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+/* BOTÕES */
+
+#inicio a,
+#contato a {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: #ffffff;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#inicio a:hover,
+#contato a:hover {
+    background-color: #cc5500;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section:not(#inicio) {
+    padding: 70px 8%;
+}
+
+section h2 {
+    color: #ff6b00;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* SERVIÇOS */
+
+#servicos {
+    background-color: #1c1c1c;
+}
+
+#servicos h3 {
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    border-left: 4px solid #ff6b00;
+    padding-left: 12px;
+}
+
+#servicos p {
+    color: #cccccc;
+    padding-left: 16px;
+}
+
+/* SOBRE */
+
+#sobre {
+    background-color: #111111;
+}
+
+#sobre p {
+    max-width: 700px;
+    color: #cccccc;
+}
+
+/* CONTATO */
+
+#contato {
+    background-color: #1c1c1c;
+}
+
+#contato p {
+    margin-bottom: 20px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 25px;
+    color: #aaaaaa;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #inicio {
+        min-height: 400px;
+        padding: 70px 8%;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    section:not(#inicio) {
+        padding: 50px 8%;
+    }
+
+}
+
+/* SUBTÍTULO DOS SERVIÇOS */
+
+.subtitulo {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* ORGANIZAÇÃO DOS CARTÕES */
+
+
+/* SEÇÃO DE SERVIÇOS */
+
+#servicos {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#servicos h2 {
+    color: #ff6b00;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.servico-card {
+    background-color: #1c1c1c;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b00;
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.2);
+}
+
+.icone {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.servico-card h3 {
+    color: #ff6b00;
+    margin-bottom: 12px;
+}
+
+.servico-card p {
+    color: #cccccc;
+    font-size: 15px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+
+.whatsapp-flutuante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    background-color: #25D366;
+    color: #ffffff;
+
+    padding: 15px 22px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-flutuante:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+#form-orcamento {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-orcamento label {
+    color: white;
+    font-weight: bold;
+}
+
+#form-orcamento input,
+#form-orcamento select,
+#form-orcamento textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+#form-orcamento textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#form-orcamento button {
+    background: #ff6b00;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-orcamento button:hover {
+    background: #e65f00;
+}
+
+/* CABEÇALHO COM FOTO DA MOTO */
+
+.cabecalho {
+    position: relative;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("img/moto-banner.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 400px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* LINKS DO MENU */
+
+.cabecalho nav.menu {
+    display: flex;
+    gap: 25px;
+
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.cabecalho nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BOTÃO MOBILE */
+
+.menu-mobile {
+    display: none;
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* MENU PARA CELULAR */
+
+@media screen and (max-width: 768px) {
+
+    .cabecalho {
+        min-height: 300px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .cabecalho nav.menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #111;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .cabecalho nav.menu.ativo {
+        display: flex;
+    }
+
+    .cabecalho nav.menu a {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .cartoes {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 100%;
+    }
+
+
+/* MENU PARA CELULARES */
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #080808;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #00aaff;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6b00;
+}
+
+/* APRESENTAÇÃO */
+
+#inicio {
+    min-height: 480px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(90deg, #111111, #292929);
+}
+
+#inicio h2 {
+    font-size: 42px;
+    max-width: 650px;
+    margin-bottom: 20px;
+    color: #ff6b00;
+}
+
+#inicio p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+/* BOTÕES */
+
+#inicio a,
+#contato a {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: #ffffff;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#inicio a:hover,
+#contato a:hover {
+    background-color: #cc5500;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section:not(#inicio) {
+    padding: 70px 8%;
+}
+
+section h2 {
+    color: #ff6b00;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* SERVIÇOS */
+
+#servicos {
+    background-color: #1c1c1c;
+}
+
+#servicos h3 {
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    border-left: 4px solid #ff6b00;
+    padding-left: 12px;
+}
+
+#servicos p {
+    color: #cccccc;
+    padding-left: 16px;
+}
+
+/* SOBRE */
+
+#sobre {
+    background-color: #111111;
+}
+
+#sobre p {
+    max-width: 700px;
+    color: #cccccc;
+}
+
+/* CONTATO */
+
+#contato {
+    background-color: #1c1c1c;
+}
+
+#contato p {
+    margin-bottom: 20px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 25px;
+    color: #aaaaaa;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #inicio {
+        min-height: 400px;
+        padding: 70px 8%;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    section:not(#inicio) {
+        padding: 50px 8%;
+    }
+
+}
+
+/* SUBTÍTULO DOS SERVIÇOS */
+
+.subtitulo {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* ORGANIZAÇÃO DOS CARTÕES */
+
+
+/* SEÇÃO DE SERVIÇOS */
+
+#servicos {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#servicos h2 {
+    color: #ff6b00;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.servico-card {
+    background-color: #1c1c1c;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b00;
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.2);
+}
+
+.icone {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.servico-card h3 {
+    color: #ff6b00;
+    margin-bottom: 12px;
+}
+
+.servico-card p {
+    color: #cccccc;
+    font-size: 15px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+
+.whatsapp-flutuante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    background-color: #25D366;
+    color: #ffffff;
+
+    padding: 15px 22px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-flutuante:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+#form-orcamento {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-orcamento label {
+    color: white;
+    font-weight: bold;
+}
+
+#form-orcamento input,
+#form-orcamento select,
+#form-orcamento textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+#form-orcamento textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#form-orcamento button {
+    background: #ff6b00;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-orcamento button:hover {
+    background: #e65f00;
+}
+
+/* CABEÇALHO COM FOTO DA MOTO */
+
+.cabecalho {
+    position: relative;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("img/moto-banner.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 400px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* LINKS DO MENU */
+
+.cabecalho nav.menu {
+    display: flex;
+    gap: 25px;
+
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.cabecalho nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BOTÃO MOBILE */
+
+.menu-mobile {
+    display: none;
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* MENU PARA CELULAR */
+
+@media screen and (max-width: 768px) {
+
+    .cabecalho {
+        min-height: 300px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .cabecalho nav.menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #111;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .cabecalho nav.menu.ativo {
+        display: flex;
+    }
+
+    .cabecalho nav.menu a {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .cartoes {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 100%;
+    }
+}
+
+/* MENU PARA CELULARES */
+
+.menu-mobile {
+    display: none;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .cabecalho nav.menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        flex-direction: column;
+        gap: 15px;
+        background: #111;
+        padding: 20px;
+        border: 1px solid #ff6b00;
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    .cabecalho nav.menu.ativo {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+} 
+@media (max-width: 500px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 500px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* FOTOS DOS SERVIÇOS */
+
+
+
+.servico-card img {
+    width: 100%;
+    height: 130px;
+    max-width: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+.servico-card:hover img {
+    transform: scale(1.03);
+}
+}
+
+/* AJUSTE DAS IMAGENS NO COMPUTADOR */
+
+@media (min-width: 769px) {
+    .servico-card img {
+        width: 220px !important;
+        height: 130px !important;
+        max-width: 220px !important;
+        max-height: 130px !important;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 10px;
+    }
+}

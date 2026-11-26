@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barbieri Motos | Oficina Especializada</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+<header class="cabecalho">
+
+    <button type="button" class="menu-mobile" onclick="abrirMenu()">
+        ☰
+    </button>
+
+    <nav class="menu" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+</header>
+
+
+    <!-- APRESENTAÇÃO -->
+    <section id="inicio">
+
+        <h2>Sua moto merece o melhor cuidado!</h2>
+
+        <p>
+            Manutenção, revisão e cuidados especiais
+            para sua motocicleta.
+        </p>
+
+        <a href="https://wa.me/5551981527052?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20minha%20moto."
+           target="_blank">
+            Solicitar orçamento
+        </a>
+
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+<h2>Nossos serviços</h2>
+
+    <p class="subtitulo">
+        Cuidado e qualidade para sua motocicleta.
+    </p>
+
+    <div class="servicos-container">
+
+        <div class="servico-card">
+            <img src="img/troca-oleo.jpg"
+            <h3>Troca de óleo</h3>
+            <p>
+                Manutenção do óleo para ajudar
+                a proteger o motor da sua moto.
+            </p>
+        </div>
+
+        <div class="servico-card">
+           <img src="img/revisao-geral.jpg"
+            <h3>Revisão geral</h3>
+            <p>
+                Verificação dos principais
+                componentes da motocicleta.
+            </p>
+        </div>
+
+        <div class="servico-card">
+            <img src="img/freios.jpg"
+            <h3>Freios</h3>
+            <p>
+                Inspeção e manutenção do
+                sistema de freios.
+            </p>
+        </div>
+
+        <div class="servico-card">
+            <img src="img/eletrica.jpg"
+            <h3>Elétrica</h3>
+            <p>
+                Diagnóstico e manutenção
+                do sistema elétrico.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- SOBRE -->
+    <section id="sobre">
+
+        <h2>Sobre a Barbieri Motos</h2>
+
+        <p>
+            Nossa proposta é oferecer atendimento de qualidade,
+            cuidado e confiança para quem ama motocicletas.
+        </p>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+
+<h2>Solicite seu orçamento</h2>
+<p>Preencha os dados abaixo e envie sua solicitação pelo WhatsApp.</p>
+
+<form id="form-orcamento">
+    <label for="nome">Seu nome:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+    <label for="moto">Modelo da moto:</label>
+    <input type="text" id="moto" placeholder="Ex: Honda CG 160" required>
+
+    <label for="ano">Ano da moto:</label>
+    <input type="text" id="ano" placeholder="Ex: 2022" required>
+
+    <label for="servico">Serviço desejado:</label>
+    <select id="servico" required>
+        <option value="">Escolha um serviço</option>
+        <option value="Troca de óleo">Troca de óleo</option>
+        <option value="Revisão geral">Revisão geral</option>
+        <option value="Freios">Freios</option>
+        <option value="Elétrica">Elétrica</option>
+        <option value="Outro">Outro</option>
+    </select>
+
+    <label for="problema">Conte um pouco sobre o que precisa:</label>
+    <textarea id="problema" placeholder="Descreva o problema ou serviço"></textarea>
+
+    <button type="submit">Enviar pelo WhatsApp</button>
+</form>
+
+        <h2>Entre em contato</h2>
+
+        <p>WhatsApp: (51) 98152-7052</p>
+
+        <a href="https://wa.me/5551981527052"
+           target="_blank">
+            Falar pelo WhatsApp
+        </a>
+
+    </section>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+
+<a
+    href="https://wa.me/5551981527052?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+    class="whatsapp-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a Barbieri Motos pelo WhatsApp">
+
+    WhatsApp 💬
+
+</a>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>© 2026 Barbieri Motos - Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
